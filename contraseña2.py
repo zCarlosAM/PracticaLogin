@@ -1,11 +1,13 @@
 import os
+import getpass
 
 ARCHIVO = "data.dat"
 CLAVE = "Kirby64"
 
 def inicio():
     print("Inicio de Sesión")
-    intento = input("Ingresa la contraseña: ")
+    intento = getpass.getpass("Ingresa la contraseña: ")
+
     if intento == CLAVE:
         print("Acceso permitido\n")
         return True
